@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SimplePOS
@@ -15,6 +8,22 @@ namespace SimplePOS
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void buttonProductSubmit_Click(object sender, EventArgs e)
+        {
+            Product product = new Product();
+            string name = textBoxProductName.Text;
+            int price = int.Parse(textBoxProductPrice.Text);
+            int stock = int.Parse(textBoxProductStock.Text);
+            string result = product.Insert(name, price, stock);
+            MessageBox.Show((result == "") ? "Product saved successfully" : result);
+        }
+
+        private void buttonProductsListRefresh_Click(object sender, EventArgs e)
+        {
+            Product product = new Product();
+            dataGridViewProducts.DataSource = product.FindAll();
         }
     }
 }
