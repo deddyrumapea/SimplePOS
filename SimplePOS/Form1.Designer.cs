@@ -108,6 +108,7 @@ namespace SimplePOS
             this.buttonProductEditorSave = new System.Windows.Forms.Button();
             this.buttonReportDelete = new System.Windows.Forms.Button();
             this.buttonReportEdit = new System.Windows.Forms.Button();
+            this.buttonProductsRefresh = new System.Windows.Forms.Button();
             this.tabControlMain.SuspendLayout();
             this.tabPageTransaction.SuspendLayout();
             this.groupBoxTransactionOverview.SuspendLayout();
@@ -506,6 +507,7 @@ namespace SimplePOS
             this.groupBoxProductsList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxProductsList.Controls.Add(this.buttonProductsRefresh);
             this.groupBoxProductsList.Controls.Add(this.dataGridViewProducts);
             this.groupBoxProductsList.Location = new System.Drawing.Point(6, 6);
             this.groupBoxProductsList.Name = "groupBoxProductsList";
@@ -538,7 +540,7 @@ namespace SimplePOS
             this.dataGridViewProducts.RowHeadersWidth = 62;
             this.dataGridViewProducts.RowTemplate.Height = 28;
             this.dataGridViewProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewProducts.Size = new System.Drawing.Size(579, 540);
+            this.dataGridViewProducts.Size = new System.Drawing.Size(579, 482);
             this.dataGridViewProducts.TabIndex = 0;
             this.dataGridViewProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProducts_CellClick);
             // 
@@ -877,11 +879,15 @@ namespace SimplePOS
             // 
             this.buttonReportRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonReportRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonReportRefresh.Image = global::SimplePOS.Properties.Resources.refresh;
             this.buttonReportRefresh.Location = new System.Drawing.Point(7, 510);
             this.buttonReportRefresh.Name = "buttonReportRefresh";
             this.buttonReportRefresh.Size = new System.Drawing.Size(365, 52);
             this.buttonReportRefresh.TabIndex = 19;
-            this.buttonReportRefresh.Text = "Refresh";
+            this.buttonReportRefresh.Text = "Refresh List";
+            this.buttonReportRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonReportRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonReportRefresh.UseVisualStyleBackColor = false;
             this.buttonReportRefresh.Click += new System.EventHandler(this.buttonReportRefresh_Click);
             // 
@@ -935,7 +941,7 @@ namespace SimplePOS
             this.buttonTransactionReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonTransactionReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTransactionReset.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.buttonTransactionReset.Image = global::SimplePOS.Properties.Resources.refresh;
+            this.buttonTransactionReset.Image = global::SimplePOS.Properties.Resources.reset;
             this.buttonTransactionReset.Location = new System.Drawing.Point(11, 188);
             this.buttonTransactionReset.Name = "buttonTransactionReset";
             this.buttonTransactionReset.Size = new System.Drawing.Size(109, 52);
@@ -997,7 +1003,7 @@ namespace SimplePOS
             // 
             this.buttonProductEditorReset.BackColor = System.Drawing.Color.White;
             this.buttonProductEditorReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonProductEditorReset.Image = global::SimplePOS.Properties.Resources.refresh;
+            this.buttonProductEditorReset.Image = ((System.Drawing.Image)(resources.GetObject("buttonProductEditorReset.Image")));
             this.buttonProductEditorReset.Location = new System.Drawing.Point(11, 184);
             this.buttonProductEditorReset.Name = "buttonProductEditorReset";
             this.buttonProductEditorReset.Size = new System.Drawing.Size(113, 52);
@@ -1060,6 +1066,21 @@ namespace SimplePOS
             this.buttonReportEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonReportEdit.UseVisualStyleBackColor = false;
             this.buttonReportEdit.Click += new System.EventHandler(this.buttonReportEdit_Click);
+            // 
+            // buttonProductsRefresh
+            // 
+            this.buttonProductsRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonProductsRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonProductsRefresh.Image = global::SimplePOS.Properties.Resources.refresh;
+            this.buttonProductsRefresh.Location = new System.Drawing.Point(7, 511);
+            this.buttonProductsRefresh.Name = "buttonProductsRefresh";
+            this.buttonProductsRefresh.Size = new System.Drawing.Size(579, 52);
+            this.buttonProductsRefresh.TabIndex = 20;
+            this.buttonProductsRefresh.Text = "Refresh List";
+            this.buttonProductsRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonProductsRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonProductsRefresh.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -1186,6 +1207,7 @@ namespace SimplePOS
         private System.Windows.Forms.Label labelProductEditorId;
         private System.Windows.Forms.TextBox textBoxProductEditorId;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button buttonProductsRefresh;
     }
 }
 
