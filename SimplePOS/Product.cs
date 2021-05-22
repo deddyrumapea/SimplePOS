@@ -181,22 +181,39 @@ namespace SimplePOS
             using (conn)
             {
                 conn.Open();
-                string cmdText = "INSERT INTO transaction_product (id_transaction, id_product, quantity) VALUES (@id_transaction, @id_product, @quantity)";
-                MySqlCommand cmd = new MySqlCommand(cmdText, conn);
+                string cmdText1 = "INSERT INTO transaction_product (id_transaction, id_product, quantity) VALUES (@id_transaction, @id_product, @quantity)";
+                MySqlCommand cmd1 = new MySqlCommand(cmdText1, conn);
 
-                using (cmd)
+                using (cmd1)
                 {
-                    cmd.Parameters.AddWithValue("@id_transaction", transactionId);
-                    cmd.Parameters.AddWithValue("@id_product", productId);
-                    cmd.Parameters.AddWithValue("@quantity", quantity);
+                    cmd1.Parameters.AddWithValue("@id_transaction", transactionId);
+                    cmd1.Parameters.AddWithValue("@id_product", productId);
+                    cmd1.Parameters.AddWithValue("@quantity", quantity);
 
                     try
                     {
-                        cmd.ExecuteNonQuery();
+                        cmd1.ExecuteNonQuery();
                     }
                     catch (Exception e)
                     {
                         result = e.Message;
+                    }
+                }
+
+                string cmdText2 = "UPDATE product SET stock=(stock - @quantity) WHERE id=@id";
+                MySqlCommand cmd2 = new MySqlCommand(cmdText2, conn);
+                using (cmd2)
+                {
+                    cmd2.Parameters.AddWithValue("@id", productId);
+                    cmd2.Parameters.AddWithValue("@quantity", quantity);
+
+                    try
+                    {
+                        cmd2.ExecuteNonQuery();
+                    }
+                    catch (Exception e)
+                    {
+                        result += e.Message;
                     }
                 }
                 conn.Close();
