@@ -90,8 +90,8 @@ namespace SimplePOS
 
             int id = int.Parse(textBoxProductEditorId.Text);
             string name = textBoxProductEditorName.Text;
-            int price = Convert.ToInt32(numericUpDownProductEditorStock.Value);
-            int stock = Convert.ToInt32(numericUpDownProductEditorPrice.Value);
+            int price = Convert.ToInt32(numericUpDownProductEditorPrice.Value);
+            int stock = Convert.ToInt32(numericUpDownProductEditorStock.Value);
 
             string result;
             if (id == product.GenerateFreshId())
