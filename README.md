@@ -4,16 +4,13 @@ Simple point of sales software built using Windows Form on NET framework.
 
 ## Requirements
 
-1. XAMPP v3.2.4
+1. phpMyAdmin
 
 ## Setup
-
-1. Open up your XAMPP control panel.
-2. Start MySQL module.
-3. Go to http://localhost/phpmyadmin/
-4. Create a new database named `simplepos`.
-5. Import the [database structure](https://raw.githubusercontent.com/deddyromnan/SimplePOS/master/SimplePOS/database/simplepos.sql) or the [database structure with sample data](https://raw.githubusercontent.com/deddyromnan/SimplePOS/master/SimplePOS/database/simplepos_with_data.sql) to the database.
-6. That's it. Now you can run the app.
+1. Start phpMyAdmin and go to http://localhost/phpmyadmin/
+2. Create a new database named `simplepos`.
+3. Import the [database structure](https://raw.githubusercontent.com/deddyromnan/SimplePOS/master/SimplePOS/database/simplepos.sql) or the [database structure with sample data](https://raw.githubusercontent.com/deddyromnan/SimplePOS/master/SimplePOS/database/simplepos_with_data.sql) to the database.
+4. That's it. Now you can run the app.
 
 PS:
 
