@@ -1,6 +1,7 @@
 # SimplePOS
 
 Simple point of sales software built using Windows Form on NET framework.
+Read the [docs here](https://drive.google.com/file/d/1nZN9326ifCXp_2NPJxQNYzk0GpqMCLXG/).
 
 ## Requirements
 
