@@ -1,5 +1,5 @@
 # SimplePOS
-<img src="https://i.imgur.com/U4z7Uq7.png" alt="preview" width="200"/>
+<img src="https://i.imgur.com/U4z7Uq7.png" alt="preview" width="500"/>
 Simple point of sales software built using Windows Form on NET framework.
 Read the [docs here (in Bahasa Indonesia)](https://drive.google.com/file/d/1nZN9326ifCXp_2NPJxQNYzk0GpqMCLXG/) and watch the [demo here (Also in Bahasa Indonesia)](https://youtu.be/dJd33bVlmpY).
 
