@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/U4z7Uq7.png" alt="preview" width="500"/>
+![Preview](https://i.imgur.com/QkFd1mk.png)
 
 # SimplePOS
 Simple point of sales software built using Windows Form on NET framework.
