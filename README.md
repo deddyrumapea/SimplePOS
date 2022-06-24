@@ -1,4 +1,6 @@
-![Preview](https://i.imgur.com/QkFd1mk.png)
+|![image](https://user-images.githubusercontent.com/14845590/175570302-66db12d8-8001-4c5d-a834-5bcd7d2ba597.png)|![image](https://user-images.githubusercontent.com/14845590/175570917-a0e7c2d2-8ce8-400d-b3b3-74534f962ef7.png)|
+|-|-|
+|![image](https://user-images.githubusercontent.com/14845590/175570477-2ee7f9c4-7f7c-401c-bdf7-951feb40e392.png)|![image](https://user-images.githubusercontent.com/14845590/175570396-4ed7258a-c725-4c3a-86b8-b6163d7dd512.png)|
 
 # SimplePOS
 Simple point of sales software built using Windows Form on NET framework.
